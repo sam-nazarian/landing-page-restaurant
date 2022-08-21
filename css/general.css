@@ -13,6 +13,7 @@ Bold: 700
 default: 1
 Small: 1.05
 Medium: 1.2
+Large: 1.8
 Paragraph default: 1.6
 
 - Letter spacing
@@ -67,8 +68,10 @@ html {
   /* 16*0.625 = 10 */
   /* we do this to respect browser's font size-setting that user choise for themselves */
   font-size: 62.5%;
+  /* if this number is higher every value, using rem will also be higher/bigger*/
 
-  /* if this number is higher every value, using rem will also be higher/bigger */
+  overflow-x: hidden;
+
 }
 
 body {
@@ -76,6 +79,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* elm that overflow in x-axis will be hidden, only works if there is nothing absolutely positioned in relation to body, needs to be both on html & body elms */
+  overflow-x: hidden;
 }
 
 /******************/
@@ -119,9 +125,9 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--center-v{
   align-items: center;
@@ -241,6 +247,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-item {

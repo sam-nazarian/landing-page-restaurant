@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- necessorly line for media queries to work, without it doesn't work on mobile devices as it zooms page out until it fits the screen, we want to make the design the device smaller -->
+  <!-- makes page match screens width, wihout zooming out -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONTS -->
@@ -11,8 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/queries.css">
 
 
   <!-- IONICONS JS SCRIPT -->
@@ -23,6 +28,7 @@
 </head>
 
 <body>
+  <!-- nav-open -->
   <header class="header">
     <a href="#">
       <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
@@ -38,6 +44,12 @@
         <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
       </ul>
     </nav>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="grid-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+
   </header>
 
   <main>
