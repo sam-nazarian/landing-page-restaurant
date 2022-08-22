@@ -72,6 +72,8 @@ html {
 
   overflow-x: hidden;
 
+  /* does NOT work on Safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {

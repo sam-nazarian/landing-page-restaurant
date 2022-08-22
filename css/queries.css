@@ -152,6 +152,7 @@ A media query should work around 200to300 px range
   /* Mobile Navigation */
   .btn-mobile-nav{
     display: block;
+    z-index: 9999;
   }
 
   /* 1st make active, then hide it */
