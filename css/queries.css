@@ -159,7 +159,14 @@ A media query should work around 200to300 px range
  
   /* Only show navigation if grid icon is clicked on */
   .main-nav{
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    /* blurs everything behinde that elm, these 2 don't overwrite each other,
+    different browsers use different properties.
+    */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
     position: absolute;
     top: 0;
     left: 0;
@@ -338,6 +345,60 @@ A media query should work around 200to300 px range
 
 }
 
+
+/******************/
+/* Fixing Safari flexbox gap */
+/******************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+/* selecting same media query multiple times, will apply all media queries  */
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
 
 
 
